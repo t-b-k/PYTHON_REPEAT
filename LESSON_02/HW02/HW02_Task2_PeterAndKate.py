@@ -32,3 +32,22 @@ else:
         print("Петя обманул Катю. Таких целых чисел не существует.")
     else: 
         print("Петя загадал числа {} и {}.".format((s-sqrt_d)//2, (s+sqrt_d)//2))
+
+"""
+РАЗОБРАНО НА СЕМИНАРЕ: 
+С ПРОВЕРКОЙ ВРЕМЕНИ ВЫПОЛНЕНИЯ
+from time import time
+s = int(input("Sum of numbers: "))
+p = int(input("Product of numbers: "))
+answer = "I didn't guess"
+start = time()
+d = s**2-4*p
+if d >= 0 : 
+    x_1 = (s-d**0.5)/2
+    x_2 = (s+d**0.5)/2
+    if x_1*x_2 == p : 
+    answer = f"{x_1}, {x_2}"
+
+print(answer)
+print(time()-start)
+"""

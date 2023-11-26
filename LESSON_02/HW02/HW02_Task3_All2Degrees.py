@@ -9,3 +9,7 @@ while two_in_degree <= n :
     print("2**{} = {}".format(degree, two_in_degree))
     degree += 1
     two_in_degree *= 2
+
+"""
+
+"""

@@ -18,3 +18,13 @@ if heads <= int(total_number/2) :
     print(f"Надо перевернуть {heads} монетку(ок)")
 else : 
     print(f"Надо перевернуть {total_number-heads} монетку(ок)")
+
+# РАЗБИРАЕМ ДОМАШКУ НА 3-М СЕМИНАРЕ: 
+# ОПТИМАЛЬНОЕ РЕШЕНИЕ: 
+
+# n = int(input())
+# count = 0
+# for i in range(n) : 
+#   if int(input()) : 
+#       count += 1
+# print(min(count, n-count))
