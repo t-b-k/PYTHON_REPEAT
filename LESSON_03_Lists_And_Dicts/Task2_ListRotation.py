@@ -21,13 +21,20 @@ print("Итоговый список = {}".format(res))
 """
 Вариант, разобранный на семинаре
 """
-list_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+list_1 = [1, 2, 3, 1, 5, 6, 1, 8, 9, 10]
 print("Иcходный список = {}".format(list_1))
 k = int(input("На сколько элементов вправо будем сдвигать этот список? => "))
-k = k%len(list_1)
+# k = k%len(list_1)
 print("k = {}".format(k))
 res = list(list_1)
 for i in range(k): 
     res.insert(0,res.pop(-1))
 print("Итоговый список = {}".format(res))
+
+# Упражняемся со списочными операциями
+print("Удалим третий по счету элемент: ")
+del(res[2])
+print(res)
+res.remove(1)
+print(res)
     
