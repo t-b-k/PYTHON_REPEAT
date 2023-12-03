@@ -19,15 +19,39 @@ print(n)
 
 # print(dir(str))
 # 1-й способ
-num_to_find = int(input())
-number_of_elements = int(input())
-user_data = list(map(int,input().split(" ")))
-if len(user_data) != number_of_elements : 
-    print("Неверные входные данные.")
-else: 
-    res = 0
-    for elem in user_data : 
-        if elem == num_to_find : res += 1
-    print(f"Число {num_to_find} входит {res} раз(а). ")
+#-------------
+# num_to_find = int(input("Количество вхождений какого числа будем искать? => "))
+# number_of_elements = int(input("Введите количество элементов списка => "))
+# user_data = list(map(int,input(f"Введите {number_of_elements} чисел через пробел => ").split(" ")))
+# if len(user_data) != number_of_elements : 
+#     print("Неверные входные данные.")
+# else: 
+#     res = 0
+#     for elem in user_data : 
+#         if elem == num_to_find : res += 1
+#     print(f"Число {num_to_find} входит {res} раз(а). ")
+
+# РАЗБОР НА СЕМИНАРЕ:
+# 2-й способ
+# -------------------
+
+# list_nums = [int(input(f"число {i+1} => ")) for i in range(int(input('Введите количество анализируемых чисел => ')))]
+# print(list_nums)
+# wanted = int(input("Какое число будем считать? => "))
+# print(f"Число {wanted} встречается {list_nums.count(wanted)} раз(а).")
+
+# 3-й способ: 
+# -----------------------
+from random import choices            # СЛУЧАЙНАЯ ВЫБОРКА С ПОВТОРЕНИЯМИ (посмотреть модуль random)
+#                                     =============================================================
+from random import sample             # посмотреть, что это такое
+
+# Чем привлекателен choices? Тем, что он дает дубликаты. 
+num = int(input("Введите длину списка = > "))
+list_nums = choices(range(num * 2), k = num)
+print(list_nums) 
+
+result = list_nums.count(int(input("Введите значение, которое будем искать => ")))
+print(result)
 
 

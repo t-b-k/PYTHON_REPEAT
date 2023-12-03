@@ -32,3 +32,12 @@ for ch in word :
         if ch in k : word_weight += v
 
 print("Слово \"{}\" в Scrabble имеет вес {}.".format(word, word_weight))
+
+# РЕШЕНИЕ НА СЕМИНАРЕ (В ОДНУ СТРОЧКУ): 
+
+word = input("Введите слово, вес которого хотите определить => ").lower()   
+print("Слово \"{}\" в Scrabble имеет вес {}.".format(word, sum([i[1] for i in weights.items() for j in word if j in i[0]])))
+
+# РАБОТА С КОДАМИ СИМВОЛОВ
+# Функция ord() - выдает код символа, 
+# функция chr() - выдает символ по его коду. 
