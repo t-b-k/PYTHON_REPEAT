@@ -5,3 +5,16 @@
 Собирающий модуль за один заход собирает чернику с трех соседних кустов. 
 Напишите программу для определения максимального количества собранных за один заход ягод
 """
+
+# Для решения предлагается использовать список длиной N, поскольку у него есть отрицательная индексация
+
+garden_bed = [int(input(f"Введите урожайность {i+1}-го куста: ")) for i in range(int(input("Сколько кустов растет на грядке? => ")))]
+print(garden_bed)
+touch_results = [garden_bed[i-2] + garden_bed[i-1] + garden_bed[i] for i in range(len(garden_bed))]
+print(touch_results)
+touch_results.sort(key = lambda x : int(x), reverse=1)
+print(touch_results)
+print(f"Максимально возможный сбор за один подход - {touch_results[0]} ягод(a)!!!")
+
+# Я - М О Л О Д Е Ц !!!
+
