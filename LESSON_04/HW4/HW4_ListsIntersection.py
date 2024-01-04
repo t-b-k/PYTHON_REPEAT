@@ -20,3 +20,12 @@ res_list.sort(key = lambda x : int(x))
 print(res_list)
  
 # Я - М О Л О Д Е Ц !!!!!
+
+# РЕШЕНИЕ, РАЗОБРАННОЕ НА СЕМИНАРЕ: 
+
+n, m = input("Введите количество элементов 1-го и 2-го множества через пробел =>").split()
+
+first = [int(i) for i in input("Введите элементы 1-го множества через пробел => \n").split()]
+second = [int(i) for i in input("Введите элементы 2-го множества через пробел => \n").split()]
+
+print(*sorted(set(first).intersection(set(second))))
