@@ -15,3 +15,12 @@ def a_plus_b(a, b) :
 a = int(input("Введите целое неотрицательное число а => "))
 b = int(input("Введите целое неотрицательное число b => "))
 print(f"{a} + {b} = {a_plus_b(a, b)}")
+
+# РАЗОБРАНО НА СЕМИНАРЕ 6: ВАРИАНТ ДЛЯ ЛЮБЫХ ДВУХ ЦЕЛЫХ a и b
+
+def sum_a_b (a, b) : 
+    if b < 0 < a : 
+        a, b = b, a
+    if b == 0 : 
+        return a
+    return sum_a_b(a+1, b-1)
