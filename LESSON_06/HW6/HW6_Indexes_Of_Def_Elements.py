@@ -11,6 +11,6 @@ minimum, maximum = input("Введите нижнюю и верхнюю гран
 print(f"Минимум = {minimum}, максимум = {maximum}")
 for i in range(len(numbers)) : 
     print(numbers[i], sep=" ")
-result = [i for i in range(len(numbers)) if minimum <= numbers[i] and numbers[i] <= maximum]
+result = [i for i in range(len(numbers)) if minimum <= numbers[i] <= maximum]
 print(len(result))
 print(result)
