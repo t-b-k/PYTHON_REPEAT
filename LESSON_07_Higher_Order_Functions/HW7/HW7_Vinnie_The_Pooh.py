@@ -14,4 +14,4 @@ phrases = input().split(sep=" ")  # Список строк-фраз
 
 def is_phrase (phrase) : 
     if len(phrase) == 1 : 
-        return is_alpha(phrase[0])
+        return (phrase[0])
