@@ -14,3 +14,12 @@ for i in range(len(numbers)) :
 result = [i for i in range(len(numbers)) if minimum <= numbers[i] <= maximum]
 print(len(result))
 print(result)
+
+# РЕШЕНИЕ, РАЗОРАННОЕ НА СЕМИНАРЕ: 
+
+nums_list = [int(i) for i in input().split()]
+num_min = int(input())
+num_max = int(input())
+
+print([ind for (ind, val) in enumerate(nums_list) if num_min <= val <= num_max])
+
