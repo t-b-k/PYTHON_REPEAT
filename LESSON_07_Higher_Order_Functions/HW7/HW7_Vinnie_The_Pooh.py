@@ -44,4 +44,14 @@ if is_poem :
 else : 
     print("Это вообще не стихи!")
 
+# РЕШЕНИЕ В СТИЛЕ PYTHON (НА СЕМИНАРЕ)
+    
+alp = "аеёиоуыэюя"
+word_sug = input().split() # считали список фраз
+vowel_letters = [word.count(char) for word in word_sug for char in word if char.lower() in alp]
+if len(set(vowel_letters)) == 1 : 
+    print("Парам-пам-пам!")
+else : 
+    print("Пам-парам!")
+
 
